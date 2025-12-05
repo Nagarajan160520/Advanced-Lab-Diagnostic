@@ -1,0 +1,165 @@
+/* Advanced Lab & Diagnostic Centre Styles */
+:root {
+  --lab-primary: #2c5aa0;
+  --lab-secondary: #1e3a8a;
+  --lab-accent: #3b82f6;
+  --lab-success: #10b981;
+  --lab-warning: #f59e0b;
+  --lab-danger: #ef4444;
+  --lab-light: #f8fafc;
+  --lab-dark: #1e293b;
+}
+
+.lab-hero-section {
+  background: linear-gradient(135deg, var(--lab-primary) 0%, var(--lab-secondary) 100%);
+  color: white;
+  padding: 100px 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.lab-feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.lab-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.lab-feature-icon {
+  font-size: 3rem;
+  color: var(--lab-primary);
+}
+
+.lab-service-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--lab-primary);
+}
+
+.lab-service-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.lab-service-icon {
+  font-size: 2.5rem;
+  color: var(--lab-primary);
+}
+
+.lab-test-card {
+  transition: all 0.3s ease;
+}
+
+.lab-test-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.lab-test-icon {
+  font-size: 2.5rem;
+  color: var(--lab-primary);
+}
+
+.lab-package-card {
+  transition: transform 0.3s ease;
+}
+
+.lab-package-card:hover {
+  transform: translateY(-10px);
+}
+
+.package-icon {
+  font-size: 3rem;
+}
+
+.lab-team-card {
+  transition: transform 0.3s ease;
+}
+
+.lab-team-card:hover {
+  transform: scale(1.05);
+}
+
+.lab-team-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.lab-blog-card {
+  transition: transform 0.3s ease;
+}
+
+.lab-blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.lab-contact-card {
+  transition: all 0.3s ease;
+}
+
+.lab-contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.lab-contact-icon {
+  font-size: 3rem;
+  color: var(--lab-primary);
+}
+
+.lab-branch-card {
+  transition: all 0.3s ease;
+}
+
+.lab-branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Custom buttons */
+.btn-lab-primary {
+  background: var(--lab-primary);
+  border-color: var(--lab-primary);
+  color: white;
+}
+
+.btn-lab-primary:hover {
+  background: var(--lab-secondary);
+  border-color: var(--lab-secondary);
+  color: white;
+}
+
+/* Emergency banner */
+.emergency-banner {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lab-hero-section {
+    padding: 80px 0;
+    min-height: 40vh;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+}
+
+/* Animation for icons */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.lab-icon {
+  animation: pulse 2s infinite;
+}
+
+.lab-icon.mission { color: var(--lab-success); }
+.lab-icon.vision { color: var(--lab-accent); }
