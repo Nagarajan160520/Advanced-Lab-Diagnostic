@@ -22,7 +22,7 @@ const Navbar = () => {
     alt="MedQ Logo" 
     style={{ width: '55px', height: '45px', marginRight: '10px', borderRadius: '50%' }} 
   />
-  Advanced Lab & Diagnostic Centre
+  Advanced Lab & Diagnostic 
 </Link>
         
         <button
