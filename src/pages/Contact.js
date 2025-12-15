@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Form, Button, Alert, Spinner } from 'react-bootstrap';
 
-const API_BASE_URL = 'https://med-q-diagnostics-backend-1.onrender.com';
+const API_BASE_URL = 'https://med-q-diagnostics-backend.onrender.com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { appointmentsAPI } from '../services/api';
 
-const API_BASE_URL = 'https://med-q-diagnostics-backend-1.onrender.com';
+const API_BASE_URL = 'https://med-q-diagnostics-backend.onrender.com';
 
 const BookAppointment = () => {
   const { user, isAuthenticated } = useAuth();

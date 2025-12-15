@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://med-q-diagnostics-backend-1.onrender.com';
+const API_BASE_URL = 'https://med-q-diagnostics-backend.onrender.com';
 
 // Create axios instance
 const api = axios.create({
