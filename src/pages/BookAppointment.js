@@ -1,14 +1,11 @@
-// src/pages/BookAppointment.js - UPDATED FOR RENDER BACKEND
-import React, { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { appointmentsAPI } from '../services/api';
+// src/pages/BookAppointment.js - MODIFIED FOR WHATSAPP MESSAGES WITHOUT LOGIN
+import React, { useState } from 'react';
 
 const API_BASE_URL = 'https://med-q-diagnostics-backend.onrender.com';
 
 const BookAppointment = () => {
-  const { user, isAuthenticated } = useAuth();
   const [formData, setFormData] = useState({
-    // Patient details (text fields)
+    // Patient details
     patientName: '',
     patientEmail: '',
     patientPhone: '',
@@ -16,7 +13,7 @@ const BookAppointment = () => {
     patientAge: '',
     patientDOB: '',
     patientAddress: '',
-    patientBloodGroup: '', // ✅ Blood group field
+    patientBloodGroup: '',
     
     // Appointment details
     appointmentDate: '',
@@ -34,25 +31,57 @@ const BookAppointment = () => {
     'A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'
   ];
 
-  // Auto-fill user data if logged in
-  useEffect(() => {
-    if (isAuthenticated && user) {
-      setFormData(prev => ({
-        ...prev,
-        patientName: user.name || '',
-        patientEmail: user.email || '',
-        patientPhone: user.phone || '',
-        patientBloodGroup: user.bloodGroup || '' // Auto-fill blood group if available
-      }));
-    }
-  }, [isAuthenticated, user]);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+  };
+
+  // Function to format WhatsApp message
+  const formatWhatsAppMessage = (data) => {
+    return `🔔 *NEW APPOINTMENT BOOKING* 🔔
+
+👤 *PATIENT DETAILS*
+------------------
+Name: ${data.patientName}
+Phone: ${data.patientPhone}
+Email: ${data.patientEmail}
+Gender: ${data.patientGender}
+Age: ${data.patientAge || 'Not provided'}
+Blood Group: ${data.patientBloodGroup || 'Not provided'}
+DOB: ${data.patientDOB || 'Not provided'}
+Address: ${data.patientAddress || 'Not provided'}
+
+📅 *APPOINTMENT DETAILS*
+---------------------
+Date: ${data.appointmentDate}
+Time: ${data.appointmentTime}
+Type: ${data.type}
+Reason: ${data.reason}
+
+📝 *ADDITIONAL NOTES*
+------------------
+${data.notes || 'No additional notes'}
+
+⏰ *BOOKING TIME*
+---------------
+${new Date().toLocaleString()}
+
+Thank you for choosing MedQ Diagnostics!`;
+  };
+
+  // Function to send WhatsApp message
+  const sendWhatsAppMessage = (data) => {
+    const message = formatWhatsAppMessage(data);
+    // Replace with your WhatsApp number (include country code without +)
+    const whatsappNumber = '916381095854'; // CHANGE THIS TO YOUR WHATSAPP NUMBER
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
   };
 
   const handleSubmit = async (e) => {
@@ -63,12 +92,7 @@ const BookAppointment = () => {
     try {
       console.log('🚀 ========== NEW APPOINTMENT BOOKING ==========');
       
-      // Step 1: Validate authentication
-      if (!isAuthenticated) {
-        throw new Error('Please login first');
-      }
-
-      // Step 2: Validate form
+      // Validate form
       if (!formData.patientName.trim()) throw new Error('Please enter patient name');
       if (!formData.patientEmail.trim()) throw new Error('Please enter email');
       if (!formData.patientPhone.trim()) throw new Error('Please enter phone number');
@@ -79,9 +103,8 @@ const BookAppointment = () => {
 
       console.log('✅ Form validation passed');
 
-      // Step 3: Prepare data - WITH PROPER BLOOD GROUP STRUCTURE
+      // Prepare data for backend
       const appointmentData = {
-        // ✅ Patient details - DIRECT FIELDS (not nested)
         patientName: formData.patientName.trim(),
         patientEmail: formData.patientEmail.trim(),
         patientPhone: formData.patientPhone.trim(),
@@ -89,28 +112,18 @@ const BookAppointment = () => {
         patientAge: formData.patientAge || null,
         patientDOB: formData.patientDOB || null,
         patientAddress: formData.patientAddress.trim() || '',
-        patientBloodGroup: formData.patientBloodGroup || null, // ✅ BLOOD GROUP AS DIRECT FIELD
-        
-        // Appointment details
+        patientBloodGroup: formData.patientBloodGroup || null,
         appointmentDate: formData.appointmentDate,
         appointmentTime: formData.appointmentTime,
         reason: formData.reason.trim(),
         type: formData.type,
         notes: formData.notes.trim(),
-        status: 'scheduled',
-        
-        // User reference
-        userName: user?.name || formData.patientName,
-        userEmail: user?.email || formData.patientEmail,
-        userPhone: user?.phone || formData.patientPhone
+        status: 'scheduled'
       };
 
-      console.log('📤 COMPLETE APPOINTMENT DATA BEING SENT:');
-      console.log('Blood Group Selected:', formData.patientBloodGroup);
-      console.log('Blood Group in Data:', appointmentData.patientBloodGroup);
-      console.log('Full Data:', appointmentData);
+      console.log('📤 Sending appointment data:', appointmentData);
 
-      // Step 4: Test backend connection - UPDATED TO RENDER URL
+      // Test backend connection
       console.log('🔗 Testing backend connection...');
       try {
         const testResponse = await fetch(`${API_BASE_URL}/api/health`);
@@ -118,30 +131,49 @@ const BookAppointment = () => {
         if (!testResponse.ok) throw new Error(`Backend returned ${testResponse.status}`);
       } catch (testError) {
         console.error('❌ BACKEND CONNECTION FAILED:', testError);
-        throw new Error('Cannot connect to server. Please try again later.');
+        // Continue with WhatsApp only if backend fails
+        console.log('⚠️ Continuing with WhatsApp message only...');
       }
 
-      // Step 5: Send appointment request
-      console.log('📨 Sending appointment request to:', API_BASE_URL);
-      const response = await appointmentsAPI.create(appointmentData);
-      
-      console.log('✅ SUCCESS! Server response:', response.data);
+      // Try to save to backend
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/appointments`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(appointmentData)
+        });
 
+        if (response.ok) {
+          const data = await response.json();
+          console.log('✅ Appointment saved to backend:', data);
+        } else {
+          console.log('⚠️ Backend save failed, but continuing...');
+        }
+      } catch (backendError) {
+        console.log('⚠️ Backend error, but continuing with WhatsApp...');
+      }
+
+      // Send WhatsApp message
+      console.log('📱 Sending WhatsApp message...');
+      sendWhatsAppMessage(formData);
+      
       setMessage({ 
         type: 'success', 
-        text: '🎉 Appointment booked successfully! It will appear in admin dashboard.' 
+        text: '✅ Appointment request sent! WhatsApp opened with your details. Please send the message to confirm.' 
       });
 
-      // Reset form but keep user data
+      // Reset form
       setFormData({
-        patientName: user?.name || '',
-        patientEmail: user?.email || '',
-        patientPhone: user?.phone || '',
+        patientName: '',
+        patientEmail: '',
+        patientPhone: '',
         patientGender: '',
         patientAge: '',
         patientDOB: '',
         patientAddress: '',
-        patientBloodGroup: user?.bloodGroup || '', // Keep blood group if available
+        patientBloodGroup: '',
         appointmentDate: '',
         appointmentTime: '',
         reason: '',
@@ -150,24 +182,11 @@ const BookAppointment = () => {
       });
 
     } catch (error) {
-      console.error('❌ APPOINTMENT BOOKING FAILED:', error);
-      
-      let errorMessage = 'Error booking appointment';
-      
-      if (error.response) {
-        console.error('📡 SERVER ERROR DETAILS:', error.response.data);
-        errorMessage = error.response.data?.message || 'Server error occurred';
-      } else if (error.request) {
-        console.error('🌐 NETWORK ERROR - No response received');
-        errorMessage = 'Cannot connect to server. Please try again later.';
-      } else {
-        console.error('⚠️ CLIENT ERROR:', error.message);
-        errorMessage = error.message;
-      }
+      console.error('❌ BOOKING FAILED:', error);
       
       setMessage({ 
         type: 'danger', 
-        text: errorMessage 
+        text: error.message || 'Error booking appointment. Please try again.' 
       });
     } finally {
       setLoading(false);
@@ -179,9 +198,9 @@ const BookAppointment = () => {
       <div className="row justify-content-center">
         <div className="col-md-8">
           <div className="card shadow">
-            <div className="card-header bg-primary text-white">
-              <h3 className="mb-0">Book Medical Appointment</h3>
-              <small>Appointments will appear in admin dashboard</small>
+            <div className="card-header bg-success text-white">
+              <h3 className="mb-0">📱 Book Medical Appointment</h3>
+              <small>Your details will be sent via WhatsApp</small>
             </div>
             <div className="card-body">
               {message.text && (
@@ -195,14 +214,8 @@ const BookAppointment = () => {
                 </div>
               )}
 
-              {!isAuthenticated && (
-                <div className="alert alert-warning">
-                  <strong>⚠️ Please Login:</strong> You need to login to book appointments.
-                </div>
-              )}
-
               <form onSubmit={handleSubmit}>
-                {/* Patient Information - TEXT FIELDS */}
+                {/* Patient Information */}
                 <div className="row">
                   <div className="col-md-6 mb-3">
                     <label className="form-label">Patient Name <span className="text-danger">*</span></label>
@@ -242,6 +255,7 @@ const BookAppointment = () => {
                       placeholder="Enter phone number"
                       required
                     />
+                    <small className="text-muted">WhatsApp number preferred</small>
                   </div>
                   <div className="col-md-6 mb-3">
                     <label className="form-label">Gender <span className="text-danger">*</span></label>
@@ -302,7 +316,7 @@ const BookAppointment = () => {
                     />
                   </div>
                   <div className="col-md-6 mb-3">
-                    {/* Empty column for proper layout */}
+                    {/* Empty for layout */}
                   </div>
                 </div>
 
@@ -367,7 +381,6 @@ const BookAppointment = () => {
                   />
                 </div>
 
-                {/* Appointment Type - Optional */}
                 <div className="mb-3">
                   <label className="form-label">Appointment Type</label>
                   <select
@@ -397,16 +410,19 @@ const BookAppointment = () => {
 
                 <button 
                   type="submit" 
-                  className="btn btn-primary btn-lg w-100"
-                  disabled={loading || !isAuthenticated}
+                  className="btn btn-success btn-lg w-100"
+                  disabled={loading}
                 >
                   {loading ? (
                     <>
                       <span className="spinner-border spinner-border-sm me-2"></span>
-                      Booking Appointment...
+                      Processing...
                     </>
                   ) : (
-                    'Book Appointment'
+                    <>
+                      <i className="bi bi-whatsapp me-2"></i>
+                      Book via WhatsApp
+                    </>
                   )}
                 </button>
               </form>

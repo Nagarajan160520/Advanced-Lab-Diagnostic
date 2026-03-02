@@ -118,7 +118,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ paddingTop: '70px' }}>
+    <div style={{ margin: 0, padding: 0 }}>
       {/* Hero Section - Professional Medical Background */}
       <section
         className="hero-section"
@@ -128,7 +128,7 @@ const Home = () => {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           color: 'white',
-          padding: '120px 0 100px 0',
+          padding: '150px 0 100px 0', // Increased top padding to account for fixed navbar
           marginTop: '0',
           position: 'relative'
         }}
@@ -215,6 +215,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Rest of your sections remain exactly the same */}
       {/* Services Preview */}
       <section className="py-5 bg-white">
         <div className="container">
@@ -1093,6 +1094,10 @@ const Home = () => {
         .testimonial-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 15px 30px rgba(15, 52, 96, 0.15) !important;
+        }
+
+        body {
+          overflow-x: hidden;
         }
       `}</style>
     </div>
