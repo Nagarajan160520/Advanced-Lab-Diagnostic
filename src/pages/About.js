@@ -387,9 +387,9 @@ const About = () => {
                         </h6>
                         <p className="mb-1">
                         <i className="fas fa-map-pin me-2 text-danger"></i>
-                          Med Q, 176/1,kollam to thirumangalam road,
+                         176/1,NH44, kollam to thirumangalam road,
                         </p>
-                        <p className="mb-1"> NH 744, opposite union office,kadayanallur</p>
+                        <p className="mb-1"> opposite union office,kadayanallur</p>
                         <p className="mb-0 text-muted small">tenkasi-627751, tamil nadu,india</p>
                       </div>
                       

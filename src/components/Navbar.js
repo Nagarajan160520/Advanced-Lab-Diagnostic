@@ -20,6 +20,9 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
+  // Phone number for emergency calls
+  const emergencyPhoneNumber = '+917338994779'; // Format for tel: link
+
   // Animation styles
   const styles = {
     navbar: {
@@ -90,12 +93,17 @@ const Navbar = () => {
       transition: 'all 0.3s ease',
       boxShadow: '0 4px 15px rgba(255,71,87,0.4)',
       textDecoration: 'none',
-      display: 'inline-block'
+      display: 'inline-block',
+      cursor: 'pointer'
     },
     emergencyButtonHover: {
       transform: 'scale(1.05)',
       boxShadow: '0 6px 20px rgba(255,71,87,0.6)',
       background: 'linear-gradient(135deg, #ff4757 0%, #ff6b6b 100%)'
+    },
+    emergencyLink: {
+      textDecoration: 'none',
+      color: 'white'
     },
     toggler: {
       border: '2px solid rgba(255,255,255,0.5)',
@@ -206,6 +214,20 @@ const Navbar = () => {
     .nav-item:nth-child(3) { animation-delay: 0.3s; }
     .nav-item:nth-child(4) { animation-delay: 0.4s; }
     .nav-item:nth-child(5) { animation-delay: 0.5s; }
+
+    /* Style for emergency link */
+    .emergency-call-link {
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .emergency-call-link:hover {
+      text-decoration: none;
+      color: white;
+    }
   `;
 
   // Handle mouse events with state
@@ -291,22 +313,27 @@ const Navbar = () => {
               })}
             </ul>
 
-            {/* Emergency button with animation */}
+            {/* Emergency button with animation - Now clickable to call */}
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link
-                  to="/contact"
-                  className="btn"
-                  style={{
-                    ...styles.emergencyButton,
-                    ...(emergencyHover ? styles.emergencyButtonHover : {})
-                  }}
+                <a
+                  href={`tel:${emergencyPhoneNumber}`}
+                  className="emergency-call-link"
+                  style={styles.emergencyLink}
                   onMouseEnter={() => setEmergencyHover(true)}
                   onMouseLeave={() => setEmergencyHover(false)}
                 >
-                  <span style={{ marginRight: '5px' }}>📞</span>
-                  Emergency: +91 7338994779
-                </Link>
+                  <div
+                    className="btn"
+                    style={{
+                      ...styles.emergencyButton,
+                      ...(emergencyHover ? styles.emergencyButtonHover : {})
+                    }}
+                  >
+                    <span style={{ marginRight: '5px' }}>📞</span>
+                    Emergency: +91 7338994779
+                  </div>
+                </a>
               </li>
             </ul>
           </div>

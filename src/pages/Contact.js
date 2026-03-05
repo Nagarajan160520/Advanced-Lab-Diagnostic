@@ -260,8 +260,10 @@ Thank you for contacting MedQ Diagnostics!`;
                   <div>
                     <h6 className="mb-1">Address</h6>
                     <p className="text-muted mb-0">
-                      38CW+36Q,Tenkasi<br />
-                      Madurai Rd,kadaiyanallur,Tamilnadu-627751
+                      176/1,NH44,kollam to<br />
+                      Thirumangalam road,
+                      Opposite union office,<br />
+                      kadaiyanallur,Tenkasi-627751
                     </p>
                   </div>
                 </div>
@@ -272,7 +274,7 @@ Thank you for contacting MedQ Diagnostics!`;
                   </div>
                   <div>
                     <h6 className="mb-1">WhatsApp</h6>
-                    <p className="text-muted mb-0">+91 7338994779</p>
+                    <p className="text-muted mb-0">+91 7338991779</p>
                     <small className="text-success">Click "Send via WhatsApp" button above</small>
                   </div>
                 </div>

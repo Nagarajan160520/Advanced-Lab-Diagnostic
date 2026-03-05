@@ -726,7 +726,7 @@ const Services = () => {
             fontSize: '0.9rem',
             opacity: '0.9'
           }}>
-            Med Q, 176/1, Kollam to Thirumangalam Road<br />
+            176/1,NH44,Kollam to Thirumangalam Road<br />
             Opposite Union Office, Kadayanallur,<br />
             Tenkasi-627751, Tamil Nadu, India
           </p>
