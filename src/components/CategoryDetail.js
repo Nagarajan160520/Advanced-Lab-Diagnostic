@@ -499,7 +499,7 @@ const CategoryDetail = () => {
             
             {/* Clickable Phone Number */}
             <a 
-              href="tel:6381095854"
+              href="tel:7338994779"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -527,7 +527,7 @@ const CategoryDetail = () => {
                 e.target.style.boxShadow = '0 4px 15px rgba(40, 167, 69, 0.3)';
               }}
             >
-              📞 Call: 6381095854
+              📞 Call: 7338994779
             </a>
             
             <p style={{ 

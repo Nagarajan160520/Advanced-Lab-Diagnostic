@@ -1001,7 +1001,7 @@ const Home = () => {
             </div>
             <div className="col-md-4 text-md-end">
               <a 
-                href="tel:+91 6381095854" 
+                href="tel:+91 7338994779" 
                 className="btn btn-light btn-lg fw-bold px-4"
                 style={{ 
                   backgroundColor: '#2E8B57', 
@@ -1010,7 +1010,7 @@ const Home = () => {
                   borderRadius: '8px'
                 }}
               >
-                📞 Call Now: +91-6381095854
+                📞 Call Now: +91-7338994779
               </a>
             </div>
           </div>

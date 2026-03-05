@@ -49,7 +49,7 @@ Thank you for contacting MedQ Diagnostics!`;
   const sendWhatsAppMessage = (data) => {
     const message = formatWhatsAppMessage(data);
     // Replace with your WhatsApp number (include country code without +)
-    const whatsappNumber = '916381095854'; // CHANGE THIS TO YOUR WHATSAPP NUMBER
+    const whatsappNumber = '917338991779'; // CHANGE THIS TO YOUR WHATSAPP NUMBER
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
@@ -272,7 +272,7 @@ Thank you for contacting MedQ Diagnostics!`;
                   </div>
                   <div>
                     <h6 className="mb-1">WhatsApp</h6>
-                    <p className="text-muted mb-0">+91 6381095854</p>
+                    <p className="text-muted mb-0">+91 7338994779</p>
                     <small className="text-success">Click "Send via WhatsApp" button above</small>
                   </div>
                 </div>
@@ -283,7 +283,7 @@ Thank you for contacting MedQ Diagnostics!`;
                   </div>
                   <div>
                     <h6 className="mb-1">Email</h6>
-                    <p className="text-muted mb-0">nagarajan16052001@gmail.com</p>
+                    <p className="text-muted mb-0">medqlaboratory@gmail.com</p>
                   </div>
                 </div>
 
@@ -305,7 +305,7 @@ Thank you for contacting MedQ Diagnostics!`;
               <div className="mt-4">
                 <h6>Emergency Contact</h6>
                 <p className="text-danger">
-                  📞 +91 6381095854
+                  📞 +91 7338994779 (Available 24/7)
                 </p>
                 <small className="text-muted">
                   Available 24/7 for emergency cases
@@ -315,7 +315,7 @@ Thank you for contacting MedQ Diagnostics!`;
               {/* Quick WhatsApp Button */}
               <div className="mt-4 text-center">
                 <a 
-                  href={`https://wa.me/916381095854?text=${encodeURIComponent('Hi, I need medical assistance.')}`}
+                  href={`https://wa.me/917338991779?text=${encodeURIComponent('Hi, I need medical assistance.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-success w-100"

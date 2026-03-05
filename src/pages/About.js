@@ -396,13 +396,13 @@ const About = () => {
                       <div className="col-md-6 mb-2">
                         <p className="mb-1">
                           <i className="fas fa-phone me-2 text-success"></i>
-                          <strong>+91-6381095854</strong>
+                          <strong>+91-7338994779</strong>
                         </p>
                       </div>
                       <div className="col-md-6 mb-2">
                         <p className="mb-1">
                           <i className="fas fa-envelope me-2 text-info"></i>
-                          tring123@gmail.com
+                          medqlaboratory@gmail.com
                         </p>
                       </div>
                       

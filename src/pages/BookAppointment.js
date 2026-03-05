@@ -76,7 +76,7 @@ Thank you for choosing MedQ Diagnostics!`;
   const sendWhatsAppMessage = (data) => {
     const message = formatWhatsAppMessage(data);
     // Replace with your WhatsApp number (include country code without +)
-    const whatsappNumber = '916381095854'; // CHANGE THIS TO YOUR WHATSAPP NUMBER
+    const whatsappNumber = '917338991779'; // CHANGE THIS TO YOUR WHATSAPP NUMBER
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     

@@ -287,7 +287,7 @@ const Services = () => {
               opacity: '0.95',
               fontWeight: '600'
             }}>
-              EFFECTIVE FROM APRIL 2025
+              EFFECTIVE FROM APRIL 2026
             </p>
           </div>
 
@@ -699,7 +699,7 @@ const Services = () => {
                   color: '#dc3545',
                   margin: '0'
                 }}>
-                  📞 6381095854
+                  📞 7338994779
                 </p>
               </div>
             </div>
@@ -735,7 +735,7 @@ const Services = () => {
             fontSize: '1.1rem',
             fontWeight: '600'
           }}>
-            📞 6381095854
+            📞 7338994779
           </p>
           <Link 
             to="/contact" 

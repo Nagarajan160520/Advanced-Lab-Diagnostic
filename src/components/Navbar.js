@@ -305,7 +305,7 @@ const Navbar = () => {
                   onMouseLeave={() => setEmergencyHover(false)}
                 >
                   <span style={{ marginRight: '5px' }}>📞</span>
-                  Emergency: +91 6381095854
+                  Emergency: +91 7338994779
                 </Link>
               </li>
             </ul>

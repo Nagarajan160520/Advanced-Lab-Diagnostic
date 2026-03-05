@@ -10,8 +10,8 @@ const Footer = () => {
             <h5>🔬 Advanced Lab & Diagnostic Centre</h5>
             <p>Providing accurate and reliable diagnostic testing services with advanced technology and expert pathologists.</p>
             <div className="mt-3">
-              <strong>Phone:</strong> +91-6381095854<br />
-              <strong>Email:</strong> nagarajan16052001@gmail.com<br />
+              <strong>Phone:</strong> +91-7338994779<br />
+              <strong>Email:</strong> medqlaboratory@gmail.com<br />
               <strong>Hours:</strong> 6:00 AM - 10:00 PM
             </div>
           </div>
@@ -43,8 +43,8 @@ const Footer = () => {
               <li>thirumangalam road</li>
               <li>opposite union office,kadayanallur,</li>
               <li>tenkasi-627751, tamil nadu,india</li>
-              <li>📞 +91-6381095854</li>
-              <li>📧 nagarajan16052001@gmail.com</li>
+              <li>📞 +91-7338994779</li>
+              <li>📧 medqlaboratory@gmail.com</li>
               <li>🕒 Open Daily: 9AM-10PM</li>
             </ul>
           </div>
