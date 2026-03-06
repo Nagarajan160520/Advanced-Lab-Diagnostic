@@ -23,7 +23,7 @@ const Navbar = () => {
   // Phone number for emergency calls
   const emergencyPhoneNumber = '+917338994779'; // Format for tel: link
 
-  // Animation styles
+  // Animation styles - REMOVED LOGO ROLLING ANIMATION
   const styles = {
     navbar: {
       background: scrolled 
@@ -51,11 +51,11 @@ const Navbar = () => {
       marginRight: '10px',
       borderRadius: '50%',
       transition: 'all 0.3s ease',
-      animation: 'rotateIn 0.8s ease-out',
+      // REMOVED rotateIn animation
       boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
     },
     logoHover: {
-      transform: 'rotate(360deg) scale(1.1)',
+      transform: 'scale(1.1)', // REMOVED rotate(360deg)
       boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
     },
     navItem: {
@@ -117,7 +117,7 @@ const Navbar = () => {
     }
   };
 
-  // Animation keyframes as a style tag
+  // Animation keyframes as a style tag - REMOVED rotateIn animation
   const animationStyles = `
     @keyframes slideDown {
       from {
@@ -148,17 +148,6 @@ const Navbar = () => {
       }
       to {
         transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes rotateIn {
-      from {
-        transform: rotate(-180deg) scale(0);
-        opacity: 0;
-      }
-      to {
-        transform: rotate(0) scale(1);
         opacity: 1;
       }
     }
@@ -244,7 +233,7 @@ const Navbar = () => {
         style={styles.navbar}
       >
         <div className="container">
-          {/* Brand with animation */}
+          {/* Brand with animation - REMOVED logo rolling */}
           <Link 
             className="navbar-brand fw-bold d-flex align-items-center" 
             to="/"
