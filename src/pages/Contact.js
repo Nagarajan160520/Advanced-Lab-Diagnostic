@@ -221,7 +221,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h6 className="mb-1">Phone</h6>
-                    <p className="text-muted mb-0">+91 6381095854</p>
+                    <p className="text-muted mb-0">+91 7338994779</p>
                   </div>
                 </div>
 
@@ -231,7 +231,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h6 className="mb-1">Email</h6>
-                    <p className="text-muted mb-0">nagarajan16052001@gmail.com</p>
+                    <p className="text-muted mb-0">medqlaboratory@gmail.com</p>
                   </div>
                 </div>
 
@@ -253,7 +253,7 @@ const Contact = () => {
               <div className="mt-4">
                 <h6>Emergency Contact</h6>
                 <p className="text-danger">
-                  📞 +91 6381095854
+                  📞 +91 7338994779
                 </p>
                 <small className="text-muted">
                   Available 24/7 for emergency cases
