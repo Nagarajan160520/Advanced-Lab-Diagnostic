@@ -5,232 +5,139 @@ const Services = () => {
   
   const labTests = [
     {
-      category: "HAEMOTOLOGY",
-      icon: "💉",
+      category: "COMPLETE TEST PRICE LIST",
+      icon: "📋",
       tests: [
-        { name: "HB", price: "₹50" },
-        { name: "DC", price: "₹50" },
-        { name: "PVC", price: "₹100" },
-        { name: "RBC COUNT", price: "₹100" },
-        { name: "AEC", price: "₹200" },
-        { name: "BT/CT", price: "₹100" },
-        { name: "CRT", price: "₹100" },
-        { name: "IMMATURE CELLS", price: "₹200" },
-        { name: "Smear Studty Opinion", price: "₹350" },
-        { name: "MALARIAL PARASITE", price: "₹200" },
-        { name: "MF", price: "₹200" },
-        { name: "COOMBS DIRECT", price: "₹600" },
-        { name: "COOMBS INDIRECT", price: "₹600" },
-        { name: "LE CELLS", price: "₹600" },
-        { name: "MANTOUX", price: "₹200" },
-        { name: "CBC", price: "₹400" },
-        { name: "ESR", price: "₹100" },
-        { name: "BLOOD GROUP & RH", price: "₹50" },
-        { name: "PLATELET COUNT", price: "₹100" },
-        { name: "RETICULOCYTE COUNT", price: "₹250" }
-      ]
-    },
-    {
-      category: "BIOCHEMISTRY",
-      icon: "🧪",
-      tests: [
-        { name: "TROPONIN -1", price: "₹1000" },
-        { name: "SODIUM", price: "₹150" },
-        { name: "POTASSIUM", price: "₹150" },
+        { name: "ABSOLUTE EOSINOPHILE COUNT", price: "₹150" },
+        { name: "ACETON (URINE)", price: "₹100" },
+        { name: "ALBUMIN", price: "₹100" },
+        { name: "ALKALINE PHOSPHATASE", price: "₹150" },
+        { name: "ALPHA FETO PROTEIN (AFP)", price: "₹800" },
+        { name: "AMYLASE", price: "₹350" },
+        { name: "ASO", price: "₹500" },
+        { name: "BETA HCG", price: "₹400" },
         { name: "BICARBONATE", price: "₹150" },
-        { name: "CHLORIDE", price: "₹150" },
-        { name: "CALCIUM", price: "₹200" },
-        { name: "PHOSPHORUS", price: "₹200" },
-        { name: "PT/INR", price: "₹400" },
-        { name: "APTT", price: "₹400" },
-        { name: "FIBRINOGEN", price: "₹800" },
+        { name: "BILIRUBIN", price: "₹100" },
+        { name: "BILIRUBIN TOTAL & DIRECT", price: "₹250" },
+        { name: "BT/CT", price: "₹400" },
+        { name: "CALCIUM", price: "₹150" },
+        { name: "CBC", price: "₹350" },
+        { name: "CHOLESTEROL", price: "₹100" },
+        { name: "COMPLETE HEMOGRAM (CBC+PS)", price: "₹950" },
+        { name: "CORTISOL", price: "₹600" },
+        { name: "CPK-MB", price: "₹500" },
+        { name: "CREATININE", price: "₹100" },
+        { name: "CRP", price: "₹400" },
+        { name: "D - DIMER", price: "₹1000" },
+        { name: "DC", price: "₹50" },
+        { name: "DENGUE IgM,IgG & NS1(CARD)", price: "₹500" },
+        { name: "ELECTROLYTES (sodium, pottassium, lonized calcium,chloride)", price: "₹500" },
+        { name: "ESR", price: "₹100" },
+        { name: "ESTRODIOL(E2)", price: "₹800" },
+        { name: "FERRITIN", price: "₹700" },
+        { name: "FERTILITY PROFILE (LH,FSH,PRL)", price: "₹1000" },
+        { name: "FSH", price: "₹400" },
+        { name: "GLOMERULAR FILTRATION RATE", price: "₹500" },
+        { name: "GROUP/RH", price: "₹50" },
+        { name: "HB", price: "₹50" },
         { name: "HBA1C", price: "₹500" },
-        { name: "LDH", price: "₹600" },
-        { name: "ADA", price: "₹600" },
-        { name: "GTT", price: "₹400" },
-        { name: "GTT 3 SAMPLES", price: "₹300" },
+        { name: "HBsAg CARD", price: "₹300" },
+        { name: "HCV CARD", price: "₹400" },
+        { name: "HIV-CARD", price: "₹300" },
+        { name: "KOH MOUNT", price: "₹1000" },
+        { name: "LDH", price: "₹500" },
+        { name: "LFT", price: "₹650" },
+        { name: "LH", price: "₹500" },
+        { name: "LIPASE", price: "₹600" },
         { name: "LIPID PROFILE", price: "₹500" },
-        { name: "LFT", price: "₹1000" },
-        { name: "ELECTROLYTES", price: "₹500" },
-        { name: "SUGAR", price: "₹50" },
-        { name: "UREA", price: "₹100" },
-        { name: "CHOLESTREROL", price: "₹100" },
-        { name: "CREATININE", price: "₹200" },
-        { name: "TRIGLYCERIDES", price: "₹250" },
-        { name: "BILIRUBIN", price: "₹200" },
-        { name: "Alkaline Phosphatase", price: "₹200" },
+        { name: "LIPO PROTEIN A", price: "₹900" },
+        { name: "MANTOUX", price: "₹100" },
+        { name: "MF", price: "₹150" },
+        { name: "OESTEROGEN", price: "₹600" },
+        { name: "PARA THYROID HORMANE", price: "₹1300" },
+        { name: "PHOSPHORUS", price: "₹200" },
+        { name: "PLATELET COUNT", price: "₹200" },
+        { name: "POTTASSIUM", price: "₹150" },
+        { name: "PROCALCITONIN", price: "₹2000" },
+        { name: "PROGESTERONE", price: "₹600" },
+        { name: "PROSTATE SPECIFIC ANTIGEN (PSA)", price: "₹800" },
+        { name: "PROTEINS", price: "₹200" },
+        { name: "RA FACTOR", price: "₹400" },
+        { name: "RBC COUNT", price: "₹100" },
+        { name: "RETICULOCYTE COUNT", price: "₹200" },
+        { name: "RFT", price: "₹200" },
+        { name: "RPR (RAPID PLASMA REGIN)", price: "₹250" },
+        { name: "SEMEN ANALYSIS (CASA)", price: "₹1000" },
+        { name: "SEMEN FRUCTOSE", price: "₹200" },
+        { name: "SGGT", price: "₹200" },
         { name: "SGOT", price: "₹200" },
         { name: "SGPT", price: "₹200" },
-        { name: "SGGT", price: "₹500" },
-        { name: "PROTEINS", price: "₹200" },
-        { name: "URIC ACID", price: "₹200" },
-        { name: "AMYLASE", price: "₹500" }, 
-        { name: "LIPASE", price: "₹900" }, 
-        { name: "ACID PHOSPHATASE", price: "₹600" }
-      ]
-    },
-    {
-      category: "URINE TESTS",
-      icon: "",
-      tests: [
-        { name: "ALBUMIN", price: "₹300" },
-        { name: "SUGAR", price: "₹30" },
-        { name: "DEPOSIT", price: "₹50" },
-        { name: "BS/BP", price: "₹100" },
-        { name: "UROBILINOGEN", price: "₹50" },
-        { name: "ACETONE", price: "₹100" },
-        { name: "URINE ROUTINE", price: "₹100" },
+        { name: "STOOL - COMPLETE EXAMINATION", price: "₹200" },
+        { name: "STOOL - OCCULT BLOOD", price: "₹200" },
+        { name: "SUGAR -FASTING/PPBS", price: "₹50+50" },
+        { name: "TC", price: "₹50" },
+        { name: "THYROID PANEL 1 (T3,T4,TSH)", price: "₹500" },
+        { name: "THYROID PANEL 2 (FT3,FT4,TSH)", price: "₹700" },
+        { name: "THYROID PANEL 3 (T3,T4,TSH,FT3,FT4)", price: "₹800" },
+        { name: "THYROID PANEL 4 (T3,T4,TSH,FT3,FT4 TPO)", price: "₹2000" },
+        { name: "TOTAL IGE", price: "₹900" },
+        { name: "TOTAL-TESTOSTERONE", price: "₹700" },
+        { name: "TRIGLYCERIDEDES", price: "₹200" },
+        { name: "TROPONNI - I", price: "₹1000" },
+        { name: "TROPONNI - T", price: "₹1200" },
+        { name: "TSH", price: "₹200" },
+        { name: "UREA", price: "₹100" },
+        { name: "URIC ACID", price: "₹150" },
         { name: "URINE COMPLETE", price: "₹200" },
-        { name: "MICROALBUMIN", price: "₹500" },
-        { name: "24 HRS PROTEIN", price: "₹400" },
-        { name: "24 HRS CREATININE", price: "₹400" },
-        { name: "PRO/CRE RATIO", price: "₹500" },
-        { name: "Creatinine Clearence", price: "₹400" },
-        { name: "Bence Jones Protein", price: "₹300" },
-        { name: "OCCULD BLOOD", price: "₹100" },
-        { name: "HCG (PREGNANCY)", price: "₹150" },
+        { name: "URINE CULTURE", price: "₹200" },
+        { name: "URINE ROUTINE", price: "₹100" },
+        { name: "VDRL", price: "₹200" },
+        { name: "VITAMIN-B12", price: "₹900" },
+        { name: "VITAMIN-D", price: "₹900" },
+        { name: "WIDAL", price: "₹400" }
       ]
-    },
-    {
-      category: "FLUID ANALYSIS",
-      icon: "💧",
-      tests: [
-        { name: "ANY FLUID ANALYSIS", price: "₹800" },
-        { name: "MALIGNANT CELLS", price: "₹800" }
-      ]
-    },
-    {
-      category: "SEMEN ANALYSIS",
-      icon: "🔍",
-      tests: [
-        { name: "SEMEN ANALYSIS", price: "₹400" },
-        { name: "IU SEMEN PROCESS", price: "₹4500" }
-      ]
-    },
-    {
-      category: "MICROBIOLOGY",
-      icon: "🔬",
-      tests: [
-        { name: "GRAM STAIN", price: "₹300" },
-        { name: "AFB STAIN", price: "₹300" },
-        { name: "FUNGAL STAIN", price: "₹300" },
-        { name: "AFB CULTURE", price: "₹1000" },
-        { name: "FUNGAL CULTURE", price: "₹1000" },
-        { name: "ENTERIC CULTURE", price: "₹400" },
-        { name: "NON ENTERIC CULTURE", price: "₹400" },
-        { name: "OTHER CULTURE", price: "₹400" }
-      ]
-    },
-    {
-      category: "MOTION TESTS",
-      icon: " ",
-      tests: [
-        { name: "COMPLETE ANALYSIS", price: "₹200" },
-        { name: "OCCULT BLOOD", price: "₹100" },
-        { name: "HANGING DROP", price: "₹150" }
-      ]
-    },
-    {
-      category: "SEROLOGY",
-      icon: "🛡️",
-      tests: [  
-        { name: "WIDAL", price: "₹200" },
-        { name: "MALARIA /AB", price: "₹300" },
-        { name: "S.TYPHI AB", price: "₹400" },
-        { name: "VDRL", price: "₹300" },
-        { name: "TRHA", price: "₹600" },
-        { name: "RA FACTOR", price: "₹400" },
-        { name: "ASO", price: "₹400" },
-        { name: "CRP", price: "₹400" },
-        { name: "Hs CRP", price: "₹800" },
-        { name: "HBsAG", price: "₹350" },
-        { name: "HAV IGM", price: "₹900" },
-        { name: "HCV IGM", price: "₹900" },
-        { name: "HCV AB", price: "₹600" },
-        { name: "HIV AB", price: "₹400" },
-        { name: "HIV ELIZA", price: "₹600" },
-        { name: "HIV WESTERN BLOT", price: "₹2500" },
-        { name: "BRUCELLA AB", price: "₹900" },
-        { name: "CHIKUNGUNYA", price: "₹900" },
-        { name: "DENGUE", price: "₹900" },
-        { name: "LEPTOSPIRA", price: "₹900" },
-        { name: "DENGUE IGG/IGM each", price: "₹600" },
-      ]
-    },
-    {
-      category: "HORMONES",
-      icon: "⚖️",
-      tests: [
-        { name: "TH/T4/TSH(Each)", price: "₹200" },
-        { name: "FT3", price: "₹400" },
-        { name: "FT4", price: "₹400" },
-        { name: "LH", price: "₹500" },
-        { name: "FSH", price: "₹500" },
-        { name: "PROLACTIN", price: "₹500" },
-        { name: "Testosterone Free", price: "₹2000" },
-        { name: "OE STROGEN", price: "₹600" },
-        { name: "PROGESTERONE", price: "₹600" },
-        { name: "BETA HCG", price: "₹600" },
-        { name: "DHEAS", price: "₹1000" },
-        { name: "CORTISOL", price: "₹800" },
-        { name: "C-PEPTIDE", price: "₹1000" },
-        { name: "ANA", price: "₹900" },
-        { name: "ALPHA FETOPROTEIN", price: "₹900" },
-        { name: "ANTI CCP", price: "₹1300" },
-        { name: "PROTEIN EPP", price: "₹1200" },
-        { name: "HB EPP", price: "₹1500" },
-        { name: "TB-GOLD FERON", price: "₹3000" },
-        { name: "Torch Panel-igm/igg Ab (10 Para)", price: "₹3000" },
-        { name: "CA-125", price: "₹1200" },
-        { name: "CA-15.3", price: "₹1600" },
-        { name: "CA-19.9", price: "₹1600" },
-        { name: "CD4/CD3 Absolute", price: "₹2000" },
-        { name: "HIV Viral Load", price: "₹4500" },
-        { name: "PSA Total", price: "₹900" },
-        { name: "PSA (Free & Total)", price: "₹1000" },
-      ]
-    },
+    }
   ];
 
   const popularTests = [
-    { name: "Complete Blood Count (CBC)", price: "₹400", time: "4 hours", icon: "🩸" },
-    { name: "Blood Sugar Fasting", price: "₹50", time: "2 hours", icon: "💉" },
-    { name: "Thyroid Profile (T3,T4,TSH)", price: "₹600", time: "6 hours", icon: "🦋" },
-    { name: "Liver Function Test", price: "₹1000", time: "6 hours", icon: "🧪" },
-    { name: "Kidney Function Test", price: "₹700", time: "6 hours", icon: "💧" },
+    { name: "Complete Blood Count (CBC)", price: "₹150", time: "4 hours", icon: "🩸" },
+    { name: "Blood Sugar Fasting", price: "₹700", time: "2 hours", icon: "💉" },
+    { name: "Thyroid Panel 1 (T3,T4,TSH)", price: "₹2000", time: "6 hours", icon: "🦋" },
+    { name: "Liver Function Test", price: "₹650", time: "6 hours", icon: "🧪" },
+    { name: "Kidney Function Test (RFT)", price: "₹250", time: "6 hours", icon: "💧" },
     { name: "Lipid Profile", price: "₹500", time: "6 hours", icon: "🩺" },
-    { name: "Urine Complete", price: "₹200", time: "2 hours", icon: "🚰" },
-    { name: "ECG", price: "₹400", time: "30 minutes", icon: "❤️" }
+    { name: "Urine Complete", price: "₹200", time: "2 hours", icon: "💧" },
+    { name: "Vitamin D", price: "₹200", time: "24 hours", icon: "☀️" }
   ];
 
   const healthPackages = [
     {
       name: "BASIC HEALTH CHECKUP",
       price: "₹999",
-      tests: ["HB", "SUGAR", "URINE ROUTINE", "ECG", "CREATININE", "CHOLESTEROL"],
+      tests: ["CBC", "SUGAR -FASTING", "URINE ROUTINE", "TSH", "CREATININE", "CHOLESTEROL"],
       ideal: "For general health screening",
       icon: "🩺"
     },
     {
       name: "DIABETES PROFILE",
-      price: "₹800",
-      tests: ["SUGAR", "HB", "URINE COMPLETE", "CREATININE", "MICROALBUMIN"],
+      price: "₹1200",
+      tests: ["HBA1C", "SUGAR -FASTING/PPBS", "MICROALBUMIN", "CREATININE", "LIPID PROFILE"],
       ideal: "For diabetes patients",
       icon: "🩸"
     },
     {
       name: "LIVER FUNCTION TEST",
-      price: "₹1200",
-      tests: ["BILIRUBIN", "SGOT", "SGPT", "ALBUMIN", "ALKALINE PHOSPHATASE"],
+      price: "₹650",
+      tests: ["BILIRUBIN", "SGOT", "SGPT", "ALKALINE PHOSPHATASE", "PROTEINS"],
       ideal: "Liver health assessment",
       icon: "🧪"
     },
     {
-      name: "KIDNEY FUNCTION TEST",
-      price: "₹900",
-      tests: ["CREATININE", "URIC ACID", "URINE COMPLETE", "CALCIUM", "SODIUM"],
-      ideal: "Kidney health assessment",
-      icon: "💧"
+      name: "THYROID PROFILE",
+      price: "₹2000",
+      tests: ["THYROID PANEL 1 (T3,T4,TSH)", "TSH", "FT3", "FT4"],
+      ideal: "Complete thyroid assessment",
+      icon: "🦋"
     }
   ];
 
@@ -294,126 +201,103 @@ const Services = () => {
           {/* Test Categories */}
           <div className="row g-4">
             {labTests.map((category, index) => (
-              <div key={index} className="col-lg-6">
-                <Link 
-                  to={`/services/${category.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
-                  style={{ textDecoration: 'none' }}
-                >
-                  <div className="category-card" style={{
-                    background: 'white',
-                    borderRadius: '12px',
-                    boxShadow: '0 5px 20px rgba(0,0,0,0.1)',
-                    overflow: 'hidden',
-                    transition: 'all 0.3s ease',
-                    border: '1px solid #e9ecef',
-                    height: '100%',
-                    cursor: 'pointer'
+              <div key={index} className="col-lg-12">
+                <div className="category-card" style={{
+                  background: 'white',
+                  borderRadius: '12px',
+                  boxShadow: '0 5px 20px rgba(0,0,0,0.1)',
+                  overflow: 'hidden',
+                  transition: 'all 0.3s ease',
+                  border: '1px solid #e9ecef',
+                  height: '100%'
+                }}>
+                  {/* Category Header */}
+                  <div style={{
+                    background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                    color: 'white',
+                    padding: '1.2rem 1.5rem',
+                    borderBottom: '2px solid #1e7e34'
                   }}>
-                    {/* Category Header */}
-                    <div style={{
-                      background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
-                      color: 'white',
-                      padding: '1.2rem 1.5rem',
-                      borderBottom: '2px solid #1e7e34'
+                    <div style={{ 
+                      display: 'flex', 
+                      alignItems: 'center',
+                      justifyContent: 'space-between'
                     }}>
-                      <div style={{ 
-                        display: 'flex', 
-                        alignItems: 'center',
-                        justifyContent: 'space-between'
-                      }}>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                          <span style={{ 
-                            fontSize: '1.8rem', 
-                            marginRight: '0.8rem'
-                          }}>
-                            {category.icon}
-                          </span>
-                          <h4 style={{ 
-                            margin: '0', 
-                            fontWeight: 'bold',
-                            fontSize: '1.1rem'
-                          }}>
-                            {category.category}
-                          </h4>
-                        </div>
-                        <div style={{
-                          display: 'flex',
-                          alignItems: 'center'
-                        }}>
-                          <div style={{
-                            backgroundColor: 'rgba(255,255,255,0.2)',
-                            padding: '3px 10px',
-                            borderRadius: '15px',
-                            fontSize: '0.75rem',
-                            fontWeight: '600',
-                            marginRight: '10px'
-                          }}>
-                            {category.tests.length} Tests
-                          </div>
-                          <span style={{
-                            fontSize: '1.2rem',
-                            opacity: '0.8'
-                          }}>
-                            →
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Preview of first few tests */}
-                    <div style={{ padding: '1rem' }}>
-                      <div style={{ 
-                        display: 'flex', 
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        marginBottom: '0.5rem'
-                      }}>
+                      <div style={{ display: 'flex', alignItems: 'center' }}>
                         <span style={{ 
-                          fontSize: '0.8rem',
-                          color: '#6c757d',
-                          fontWeight: '500'
+                          fontSize: '1.8rem', 
+                          marginRight: '0.8rem'
                         }}>
-                          Click to view all {category.tests.length} tests
+                          {category.icon}
                         </span>
+                        <h4 style={{ 
+                          margin: '0', 
+                          fontWeight: 'bold',
+                          fontSize: '1.5rem'
+                        }}>
+                          {category.category}
+                        </h4>
                       </div>
-                      <div style={{ 
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
-                        gap: '0.5rem'
+                      <div style={{
+                        backgroundColor: 'rgba(255,255,255,0.2)',
+                        padding: '3px 10px',
+                        borderRadius: '15px',
+                        fontSize: '0.75rem',
+                        fontWeight: '600'
                       }}>
-                        {category.tests.slice(0, 4).map((test, testIndex) => (
-                          <div key={testIndex} style={{
-                            padding: '0.4rem 0.6rem',
-                            backgroundColor: '#f8f9fa',
-                            borderRadius: '6px',
-                            fontSize: '0.75rem'
-                          }}>
-                            <div style={{ 
-                              fontWeight: '500',
-                              color: '#2d3748'
-                            }}>
-                              {test.name}
-                            </div>
-                            <div style={{ 
-                              fontWeight: 'bold',
-                              color: '#28a745',
-                              fontSize: '0.7rem'
-                            }}>
-                              {test.price}
-                            </div>
-                          </div>
-                        ))}
+                        {category.tests.length} Tests
                       </div>
                     </div>
                   </div>
-                </Link>
+
+                  {/* All Tests in Grid */}
+                  <div style={{ padding: '2rem' }}>
+                    <div style={{ 
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+                      gap: '0.8rem'
+                    }}>
+                      {category.tests.map((test, testIndex) => (
+                        <div key={testIndex} style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          padding: '0.8rem 1rem',
+                          backgroundColor: testIndex % 2 === 0 ? '#f8f9fa' : 'white',
+                          borderRadius: '8px',
+                          border: '1px solid #e9ecef',
+                          transition: 'all 0.2s ease'
+                        }}>
+                          <span style={{ 
+                            fontWeight: '500',
+                            color: '#2d3748',
+                            fontSize: '0.9rem'
+                          }}>
+                            {test.name}
+                          </span>
+                          <span style={{ 
+                            fontWeight: 'bold',
+                            color: '#28a745',
+                            fontSize: '1rem',
+                            backgroundColor: '#e8f5e9',
+                            padding: '4px 12px',
+                            borderRadius: '20px',
+                            whiteSpace: 'nowrap',
+                            marginLeft: '10px'
+                          }}>
+                            {test.price}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Rest of the sections remain the same */}
       {/* Popular Tests - Quick Access */}
       <section style={{ padding: '60px 0', backgroundColor: 'white' }}>
         <div className="container">
@@ -774,4 +658,5 @@ const Services = () => {
     </div>
   );
 };
+
 export default Services;
