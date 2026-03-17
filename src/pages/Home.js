@@ -899,7 +899,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="owl-carousel owl-theme">
+          <div className="owl-carousel owl-theme">  
             {[
               {
                 name: 'Kabilan',
