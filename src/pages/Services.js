@@ -99,7 +99,7 @@ const Services = () => {
     }
   ];
 
-  const popularTests = [
+  /* const popularTests = [
     { name: "Complete Blood Count (CBC)", price: "₹150", time: "4 hours", icon: "🩸" },
     { name: "Blood Sugar Fasting", price: "₹700", time: "2 hours", icon: "💉" },
     { name: "Thyroid Panel 1 (T3,T4,TSH)", price: "₹2000", time: "6 hours", icon: "🦋" },
@@ -139,7 +139,7 @@ const Services = () => {
       ideal: "Complete thyroid assessment",
       icon: "🦋"
     }
-  ];
+  ];  */
 
   return (
     <div style={{ paddingTop: '70px', fontFamily: 'Arial, sans-serif', backgroundColor: '#f8f9fa' }}>
@@ -298,7 +298,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Popular Tests - Quick Access */}
+      {/* Popular Tests - Quick Access 
       <section style={{ padding: '60px 0', backgroundColor: 'white' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
@@ -366,9 +366,9 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
-      {/* Health Packages */}
+      {/* Health Packages 
       <section style={{ 
         padding: '60px 0', 
         background: 'linear-gradient(135deg, #17a2b8 0%, #138496 100%)'
@@ -462,7 +462,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Home Collection Service */}
       <section style={{ 
