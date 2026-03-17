@@ -99,60 +99,18 @@ const Services = () => {
     }
   ];
 
-  /* const popularTests = [
-    { name: "Complete Blood Count (CBC)", price: "₹150", time: "4 hours", icon: "🩸" },
-    { name: "Blood Sugar Fasting", price: "₹700", time: "2 hours", icon: "💉" },
-    { name: "Thyroid Panel 1 (T3,T4,TSH)", price: "₹2000", time: "6 hours", icon: "🦋" },
-    { name: "Liver Function Test", price: "₹650", time: "6 hours", icon: "🧪" },
-    { name: "Kidney Function Test (RFT)", price: "₹250", time: "6 hours", icon: "💧" },
-    { name: "Lipid Profile", price: "₹500", time: "6 hours", icon: "🩺" },
-    { name: "Urine Complete", price: "₹200", time: "2 hours", icon: "💧" },
-    { name: "Vitamin D", price: "₹200", time: "24 hours", icon: "☀️" }
-  ];
-
-  const healthPackages = [
-    {
-      name: "BASIC HEALTH CHECKUP",
-      price: "₹999",
-      tests: ["CBC", "SUGAR -FASTING", "URINE ROUTINE", "TSH", "CREATININE", "CHOLESTEROL"],
-      ideal: "For general health screening",
-      icon: "🩺"
-    },
-    {
-      name: "DIABETES PROFILE",
-      price: "₹1200",
-      tests: ["HBA1C", "SUGAR -FASTING/PPBS", "MICROALBUMIN", "CREATININE", "LIPID PROFILE"],
-      ideal: "For diabetes patients",
-      icon: "🩸"
-    },
-    {
-      name: "LIVER FUNCTION TEST",
-      price: "₹650",
-      tests: ["BILIRUBIN", "SGOT", "SGPT", "ALKALINE PHOSPHATASE", "PROTEINS"],
-      ideal: "Liver health assessment",
-      icon: "🧪"
-    },
-    {
-      name: "THYROID PROFILE",
-      price: "₹2000",
-      tests: ["THYROID PANEL 1 (T3,T4,TSH)", "TSH", "FT3", "FT4"],
-      ideal: "Complete thyroid assessment",
-      icon: "🦋"
-    }
-  ];  */
-
   return (
     <div style={{ paddingTop: '70px', fontFamily: 'Arial, sans-serif', backgroundColor: '#f8f9fa' }}>
       {/* Hero Section */}
       <section style={{ 
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        padding: '80px 0',
+        padding: '60px 0',
         color: 'white',
         textAlign: 'center'
       }}>
         <div className="container">
           <h1 style={{ 
-            fontSize: '3rem', 
+            fontSize: 'clamp(2rem, 5vw, 3rem)', 
             fontWeight: 'bold', 
             marginBottom: '1rem',
             textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
@@ -160,7 +118,7 @@ const Services = () => {
             Our Diagnostic Services
           </h1>
           <p style={{ 
-            fontSize: '1.3rem', 
+            fontSize: 'clamp(1rem, 3vw, 1.3rem)', 
             marginBottom: '0',
             opacity: '0.9'
           }}>
@@ -170,26 +128,26 @@ const Services = () => {
       </section>
 
       {/* Complete Test Price List */}
-      <section style={{ padding: '60px 0', backgroundColor: '#f8f9fa' }}>
+      <section style={{ padding: '40px 0', backgroundColor: '#f8f9fa' }}>
         <div className="container">
           <div style={{
             background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)',
             color: 'white',
-            padding: '2rem',
+            padding: '1.5rem',
             borderRadius: '12px',
             boxShadow: '0 10px 30px rgba(220, 53, 69, 0.3)',
             textAlign: 'center',
-            marginBottom: '3rem'
+            marginBottom: '2rem'
           }}>
             <h2 style={{ 
-              fontSize: '2rem', 
+              fontSize: 'clamp(1.5rem, 4vw, 2rem)', 
               fontWeight: 'bold', 
               marginBottom: '0.5rem'
             }}>
               COMPLETE TEST PRICE LIST
             </h2>
             <p style={{ 
-              fontSize: '1.1rem', 
+              fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', 
               marginBottom: '0',
               opacity: '0.95',
               fontWeight: '600'
@@ -199,9 +157,9 @@ const Services = () => {
           </div>
 
           {/* Test Categories */}
-          <div className="row g-4">
+          <div className="row g-3">
             {labTests.map((category, index) => (
-              <div key={index} className="col-lg-12">
+              <div key={index} className="col-12">
                 <div className="category-card" style={{
                   background: 'white',
                   borderRadius: '12px',
@@ -215,17 +173,19 @@ const Services = () => {
                   <div style={{
                     background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
                     color: 'white',
-                    padding: '1.2rem 1.5rem',
+                    padding: '1rem 1.2rem',
                     borderBottom: '2px solid #1e7e34'
                   }}>
                     <div style={{ 
                       display: 'flex', 
                       alignItems: 'center',
-                      justifyContent: 'space-between'
+                      justifyContent: 'space-between',
+                      flexWrap: 'wrap',
+                      gap: '10px'
                     }}>
                       <div style={{ display: 'flex', alignItems: 'center' }}>
                         <span style={{ 
-                          fontSize: '1.8rem', 
+                          fontSize: 'clamp(1.3rem, 4vw, 1.8rem)', 
                           marginRight: '0.8rem'
                         }}>
                           {category.icon}
@@ -233,7 +193,7 @@ const Services = () => {
                         <h4 style={{ 
                           margin: '0', 
                           fontWeight: 'bold',
-                          fontSize: '1.5rem'
+                          fontSize: 'clamp(1.1rem, 3.5vw, 1.5rem)'
                         }}>
                           {category.category}
                         </h4>
@@ -250,11 +210,11 @@ const Services = () => {
                     </div>
                   </div>
 
-                  {/* All Tests in Grid */}
-                  <div style={{ padding: '2rem' }}>
+                  {/* All Tests in Responsive Grid */}
+                  <div style={{ padding: '1.5rem' }}>
                     <div style={{ 
                       display: 'grid',
-                      gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+                      gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
                       gap: '0.8rem'
                     }}>
                       {category.tests.map((test, testIndex) => (
@@ -262,7 +222,7 @@ const Services = () => {
                           display: 'flex',
                           justifyContent: 'space-between',
                           alignItems: 'center',
-                          padding: '0.8rem 1rem',
+                          padding: '0.7rem 0.8rem',
                           backgroundColor: testIndex % 2 === 0 ? '#f8f9fa' : 'white',
                           borderRadius: '8px',
                           border: '1px solid #e9ecef',
@@ -271,19 +231,20 @@ const Services = () => {
                           <span style={{ 
                             fontWeight: '500',
                             color: '#2d3748',
-                            fontSize: '0.9rem'
+                            fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)',
+                            flex: '1',
+                            marginRight: '8px'
                           }}>
                             {test.name}
                           </span>
                           <span style={{ 
                             fontWeight: 'bold',
                             color: '#28a745',
-                            fontSize: '1rem',
+                            fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
                             backgroundColor: '#e8f5e9',
-                            padding: '4px 12px',
+                            padding: '4px 10px',
                             borderRadius: '20px',
-                            whiteSpace: 'nowrap',
-                            marginLeft: '10px'
+                            whiteSpace: 'nowrap'
                           }}>
                             {test.price}
                           </span>
@@ -298,198 +259,32 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Popular Tests - Quick Access 
-      <section style={{ padding: '60px 0', backgroundColor: 'white' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <h2 style={{ 
-              fontSize: '2.2rem', 
-              fontWeight: 'bold', 
-              marginBottom: '1rem',
-              color: '#2c5530'
-            }}>
-              Quick Book Tests
-            </h2>
-            <p style={{ 
-              fontSize: '1.1rem', 
-              color: '#6c757d'
-            }}>
-              Most frequently booked tests with quick results
-            </p>
-          </div>
-
-          <div className="row g-4">
-            {popularTests.map((test, index) => (
-              <div key={index} className="col-md-6 col-lg-3">
-                <div className="popular-test-card" style={{
-                  background: 'white',
-                  border: '2px solid #e9ecef',
-                  borderRadius: '12px',
-                  padding: '1.5rem',
-                  height: '100%',
-                  textAlign: 'center',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-                  cursor: 'pointer'
-                }}>
-                  <div style={{ 
-                    fontSize: '2.5rem', 
-                    marginBottom: '1rem'
-                  }}>
-                    {test.icon}
-                  </div>
-                  <h6 style={{ 
-                    fontWeight: 'bold', 
-                    marginBottom: '0.5rem',
-                    fontSize: '0.95rem',
-                    color: '#2c5530'
-                  }}>
-                    {test.name}
-                  </h6>
-                  <div style={{ marginBottom: '0.5rem' }}>
-                    <span style={{ 
-                      fontWeight: 'bold', 
-                      fontSize: '1.1rem',
-                      color: '#28a745'
-                    }}>
-                      {test.price}
-                    </span>
-                  </div>
-                  <small style={{ 
-                    color: '#6c757d',
-                    fontWeight: '500'
-                  }}>
-                    Report: {test.time}
-                  </small>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>*/}
-
-      {/* Health Packages 
-      <section style={{ 
-        padding: '60px 0', 
-        background: 'linear-gradient(135deg, #17a2b8 0%, #138496 100%)'
-      }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '3rem', color: 'white' }}>
-            <h2 style={{ 
-              fontSize: '2.2rem', 
-              fontWeight: 'bold', 
-              marginBottom: '1rem'
-            }}>
-              Health Checkup Packages
-            </h2>
-            <p style={{ 
-              fontSize: '1.1rem',
-              opacity: '0.9'
-            }}>
-              Comprehensive health assessment packages for preventive care
-            </p>
-          </div>
-
-          <div className="row g-4">
-            {healthPackages.map((pkg, index) => (
-              <div key={index} className="col-md-6 col-lg-3">
-                <div className="package-card" style={{
-                  background: 'white',
-                  borderRadius: '12px',
-                  boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
-                  height: '100%',
-                  overflow: 'hidden',
-                  transition: 'all 0.3s ease'
-                }}>
-                  <div style={{
-                    background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)',
-                    color: 'white',
-                    textAlign: 'center',
-                    padding: '1.5rem'
-                  }}>
-                    <div style={{ fontSize: '2.5rem', marginBottom: '0.8rem' }}>{pkg.icon}</div>
-                    <h5 style={{ 
-                      marginBottom: '0.5rem',
-                      fontWeight: 'bold',
-                      fontSize: '1rem'
-                    }}>
-                      {pkg.name}
-                    </h5>
-                    <h4 style={{ 
-                      margin: '0',
-                      fontWeight: 'bold',
-                      fontSize: '1.5rem'
-                    }}>
-                      {pkg.price}
-                    </h4>
-                  </div>
-                  <div style={{ 
-                    padding: '1.5rem', 
-                    backgroundColor: 'white'
-                  }}>
-                    <p style={{ 
-                      color: '#6c757d', 
-                      fontSize: '0.85rem',
-                      marginBottom: '1rem',
-                      textAlign: 'center'
-                    }}>
-                      {pkg.ideal}
-                    </p>
-                    <ul style={{ 
-                      listStyle: 'none', 
-                      padding: '0',
-                      margin: '0'
-                    }}>
-                      {pkg.tests.map((test, testIndex) => (
-                        <li key={testIndex} style={{ 
-                          marginBottom: '0.5rem',
-                          padding: '0.4rem',
-                          backgroundColor: testIndex % 2 === 0 ? '#f8f9fa' : 'white',
-                          borderRadius: '5px'
-                        }}>
-                          <small style={{ 
-                            color: '#28a745',
-                            fontWeight: '500'
-                          }}>
-                            ✓ {test}
-                          </small>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>*/}
-
       {/* Home Collection Service */}
       <section style={{ 
-        padding: '60px 0', 
+        padding: '40px 0', 
         backgroundColor: 'white'
       }}>
         <div className="container">
-          <div className="row align-items-center">
+          <div className="row align-items-center g-4">
             <div className="col-lg-8">
               <h2 style={{ 
                 fontWeight: 'bold', 
                 marginBottom: '1rem',
-                fontSize: '1.8rem',
+                fontSize: 'clamp(1.5rem, 4vw, 1.8rem)',
                 color: '#2c5530'
               }}>
                 🏠 Home Collection Service
               </h2>
               <p style={{ 
-                marginBottom: '2rem',
-                fontSize: '1rem',
+                marginBottom: '1.5rem',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
                 color: '#6c757d'
               }}>
                 Get your samples collected from the comfort of your home or office. 
                 Our trained phlebotomists will visit you at your preferred time.
               </p>
-              <div className="row">
-                <div className="col-md-6 mb-3">
+              <div className="row g-3">
+                <div className="col-sm-6">
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -508,21 +303,21 @@ const Services = () => {
                     <div>
                       <strong style={{ 
                         color: '#212529',
-                        fontSize: '0.9rem'
+                        fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)'
                       }}>
                         Below 3 Kilometers
                       </strong>
                       <div style={{ 
                         color: '#28a745', 
                         fontWeight: 'bold',
-                        fontSize: '1.1rem'
+                        fontSize: 'clamp(1rem, 3vw, 1.1rem)'
                       }}>
                         Rs. 50/-
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6 mb-3">
+                <div className="col-sm-6">
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -541,14 +336,14 @@ const Services = () => {
                     <div>
                       <strong style={{ 
                         color: '#212529',
-                        fontSize: '0.9rem'
+                        fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)'
                       }}>
                         Above 3 - 10 Kilometers
                       </strong>
                       <div style={{ 
                         color: '#28a745', 
                         fontWeight: 'bold',
-                        fontSize: '1.1rem'
+                        fontSize: 'clamp(1rem, 3vw, 1.1rem)'
                       }}>
                         Rs. 100/-
                       </div>
@@ -557,12 +352,13 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 text-center">
+            <div className="col-lg-4">
               <div style={{
-                padding: '1rem',
+                padding: '1.5rem',
                 backgroundColor: '#f8f9fa',
                 borderRadius: '12px',
-                border: '2px solid #dee2e6'
+                border: '2px solid #dee2e6',
+                textAlign: 'center'
               }}>
                 <div style={{ 
                   fontSize: '4rem', 
@@ -573,12 +369,13 @@ const Services = () => {
                 </div>
                 <h6 style={{ 
                   fontWeight: 'bold',
-                  color: '#2c5530'
+                  color: '#2c5530',
+                  fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
                 }}>
                   Call for Home Collection
                 </h6>
                 <p style={{ 
-                  fontSize: '1.2rem',
+                  fontSize: 'clamp(1.1rem, 3.5vw, 1.2rem)',
                   fontWeight: 'bold',
                   color: '#dc3545',
                   margin: '0'
@@ -593,7 +390,7 @@ const Services = () => {
 
       {/* Contact Section */}
       <section style={{ 
-        padding: '60px 0', 
+        padding: '40px 0', 
         backgroundColor: '#2c5530',
         color: 'white' 
       }}>
@@ -601,13 +398,13 @@ const Services = () => {
           <h3 style={{ 
             fontWeight: 'bold', 
             marginBottom: '1rem',
-            fontSize: '1.5rem'
+            fontSize: 'clamp(1.2rem, 4vw, 1.5rem)'
           }}>
             Advanced Lab & Diagnostic Centre
           </h3>
           <p style={{ 
             marginBottom: '0.5rem',
-            fontSize: '0.9rem',
+            fontSize: 'clamp(0.85rem, 2.5vw, 0.9rem)',
             opacity: '0.9'
           }}>
             176/1,NH44,Kollam to Thirumangalam Road<br />
@@ -615,8 +412,8 @@ const Services = () => {
             Tenkasi-627751, Tamil Nadu, India
           </p>
           <p style={{ 
-            marginBottom: '2rem',
-            fontSize: '1.1rem',
+            marginBottom: '1.5rem',
+            fontSize: 'clamp(1rem, 3vw, 1.1rem)',
             fontWeight: '600'
           }}>
             📞 7338994779
@@ -626,8 +423,9 @@ const Services = () => {
             className="btn btn-light btn-lg"
             style={{
               fontWeight: 'bold',
-              padding: '10px 25px',
-              borderRadius: '25px'
+              padding: '10px 20px',
+              borderRadius: '25px',
+              fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
             }}
           >
             📍 Visit Our Lab
@@ -635,9 +433,61 @@ const Services = () => {
         </div>
       </section>
  
-      {/* Add CSS for hover effects */}
+      {/* Add CSS for hover effects and responsive design */}
       <style>
         {`
+          @media (max-width: 768px) {
+            .category-card {
+              margin-bottom: 15px;
+            }
+            
+            .category-card div[style*="grid-template-columns"] {
+              grid-template-columns: repeat(2, 1fr) !important;
+              gap: 8px !important;
+            }
+            
+            .category-card div[style*="grid-template-columns"] > div {
+              padding: 8px 6px !important;
+              font-size: 0.8rem !important;
+              flex-direction: column !important;
+              align-items: flex-start !important;
+              gap: 5px !important;
+            }
+            
+            .category-card div[style*="grid-template-columns"] > div span:first-child {
+              font-size: 0.75rem !important;
+              margin-right: 0 !important;
+              width: 100% !important;
+            }
+            
+            .category-card div[style*="grid-template-columns"] > div span:last-child {
+              font-size: 0.7rem !important;
+              padding: 2px 6px !important;
+              margin-left: 0 !important;
+              width: 100% !important;
+              text-align: center !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .category-card div[style*="grid-template-columns"] {
+              gap: 5px !important;
+            }
+            
+            .category-card div[style*="grid-template-columns"] > div {
+              padding: 6px 4px !important;
+            }
+            
+            .category-card div[style*="grid-template-columns"] > div span:first-child {
+              font-size: 0.7rem !important;
+            }
+            
+            .category-card div[style*="grid-template-columns"] > div span:last-child {
+              font-size: 0.65rem !important;
+              padding: 2px 4px !important;
+            }
+          }
+          
           .popular-test-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
