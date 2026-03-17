@@ -902,42 +902,42 @@ const Home = () => {
           <div className="owl-carousel owl-theme">
             {[
               {
-                name: 'Dr. Rajesh Kumar',
+                name: 'Kabilan',
                 review: 'As a referring physician, I always trust Advanced Lab for accurate and timely reports. Their professionalism is commendable.',
                 rating: 5,
                 test: 'Referral Partner',
                 role: 'Cardiologist'
               },
               {
-                name: 'Priya Sharma',
+                name: 'ramesh kumar',
                 review: 'The home collection service saved me so much time. The phlebotomist was very professional and the reports were accurate.',
                 rating: 5,
                 test: 'Full Body Checkup',
                 role: 'Software Engineer'
               },
               {
-                name: 'Mr. Suresh Menon',
+                name: 'priya s',
                 review: 'Quick service and accurate results. The online report portal is very convenient for accessing historical reports.',
                 rating: 4,
                 test: 'Diabetes Monitoring',
                 role: 'Business Owner'
               },
               {
-                name: 'Dr. Anitha Reddy',
+                name: 'varun',
                 review: 'Excellent quality control and precise results. Our hospital has been partnering with them for 5 years.',
                 rating: 5,
                 test: 'Hospital Partner',
                 role: 'Pathologist'
               },
               {
-                name: 'Karthik M',
+                name: 'Rajan',
                 review: 'Very professional staff and clean facility. Got my reports within promised timeline.',
                 rating: 4,
                 test: 'Pre-employment Checkup',
                 role: 'IT Professional'
               },
               {
-                name: 'Mrs. Geetha R',
+                name: 'Geetha R',
                 review: 'The wellness package was comprehensive and affordable. Doctor consultation included was very helpful.',
                 rating: 5,
                 test: 'Executive Health Package',
