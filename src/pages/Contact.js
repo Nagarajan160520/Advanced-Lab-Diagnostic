@@ -209,8 +209,8 @@ const Contact = () => {
                   <div>
                     <h6 className="mb-1">Address</h6>
                     <p className="text-muted mb-0">
-                      38CW+36Q,Tenkasi<br />
-                      Madurai Rd,kadaiyanallur,Tamilnadu-627751
+                      176/1,NH44,kollam-Thirumangalam road<br />
+                      Opposite Union office,kadaiyanallur,Tamilnadu-627751
                     </p>
                   </div>
                 </div>

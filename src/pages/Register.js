@@ -151,7 +151,7 @@ const Register = () => {
             <div className="card shadow">
               <div className="card-header bg-primary text-white text-center py-4">
                 <h2 className="mb-0">Create Your Account</h2>
-                <p className="mb-0 opacity-75">Join MediCare Hospital today</p>
+                <p className="mb-0 opacity-75">Join MedQ Lab today</p>
               </div>
               
               <div className="card-body p-4">

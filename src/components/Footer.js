@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => { 
   // Your phone number (without any special characters for the tel link)
-  const phoneNumber = '+91'; // Format: +91 followed by number without spaces
+  const phoneNumber = '+91 6381095854'; // Format: +91 followed by number without spaces
   
   return (
     <footer className="footer" style={{backgroundColor: '#1e293b', color: 'white', padding: '40px 0'}}>
