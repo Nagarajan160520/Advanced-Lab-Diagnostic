@@ -296,13 +296,13 @@ const PatientPortal = () => {
                                       {user?.email}
                                     </p>
                                   </div>
-                                  <div className="mb-3">
+                                  {/*<div className="mb-3">
                                     <label className="form-label text-muted small mb-1">Patient ID</label>
                                     <p className="fw-bold text-dark mb-0 fs-6 font-monospace">
                                       <i className="fas fa-fingerprint me-2 text-primary"></i>
                                       {user?._id || user?.id}
                                     </p>
-                                  </div>
+                                  </div> */}
                                 </div>
                               </div>
                             </div>
