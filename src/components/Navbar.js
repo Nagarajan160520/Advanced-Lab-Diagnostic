@@ -13,17 +13,22 @@ const Navbar = () => {
     navigate('/');
   };
 
+  const handleCall = () => {
+    // Replace with your actual phone number
+    window.location.href = 'tel:+917338994779';
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style={{ borderBottom: '2px solid #fff' }}>
       <div className="container">
-      <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
-  <img 
-    src={logo} 
-    alt="MedQ Logo" 
-    style={{ width: '55px', height: '45px', marginRight: '10px', borderRadius: '50%' }} 
-  />
-  Advanced Lab & Diagnostic 
-</Link>
+        <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
+          <img 
+            src={logo} 
+            alt="MedQ Logo" 
+            style={{ width: '55px', height: '45px', marginRight: '10px', borderRadius: '50%' }} 
+          />
+          Advanced Lab & Diagnostic 
+        </Link>
         
         <button
           className="navbar-toggler"
@@ -68,14 +73,6 @@ const Navbar = () => {
                 Appointment
               </Link>
             </li>
-           {/* <li className="nav-item">
-              <Link 
-                className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`} 
-                to="/blog"
-              >
-                Health Tips
-              </Link>
-            </li>*/}
             <li className="nav-item">
               <Link 
                 className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} 
@@ -105,16 +102,6 @@ const Navbar = () => {
                     👤 {user?.name}
                   </button>
                   <ul className="dropdown-menu">
-                    {/*<li>
-                      <Link className="dropdown-item" to="/dashboard">
-                        📊 Dashboard
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/profile">
-                        👤 My Profile
-                      </Link>
-                    </li>*/}
                     <li><hr className="dropdown-divider" /></li>
                     <li>
                       <button className="dropdown-item text-danger" onClick={handleLogout}>
@@ -127,21 +114,18 @@ const Navbar = () => {
             ) : (
               <>
                 <li className="nav-item">
-                  <Link
-                    to="/login"
-                    className="btn btn-outline-light btn-sm me-2"
+                  <button
+                    onClick={handleCall}
+                    className="btn btn-success btn-sm"
+                    style={{ 
+                      fontWeight: '500',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '5px'
+                    }}
                   >
-                    🔐 Login
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    to="/register"
-                    className="btn btn-light btn-sm"
-                    style={{ color: '#0056b3', fontWeight: '500' }}
-                  >
-                    📝 Register
-                  </Link>
+                    📞 Call Now:+917338994779
+                  </button>
                 </li>
               </>
             )}
