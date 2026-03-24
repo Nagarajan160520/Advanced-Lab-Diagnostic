@@ -889,7 +889,7 @@ const Home = () => {
       </section>
 
     
-      {/* Testimonials - Owl Carousel */}
+      {/* 
       <section className="py-5 bg-light">
         <div className="container">
           <div className="text-center mb-5">
@@ -984,7 +984,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Emergency/Quick Contact Banner */}
       <section 

@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="mt-3">
               <strong>Phone:</strong> +91-7338994779<br />
               <strong>Email:</strong> medqlaboratory@gmail.com<br />
-              <strong>Hours:</strong> 6:00 AM - 10:00 PM
+              
             </div>
           </div>
           
@@ -48,7 +48,7 @@ const Footer = () => {
               <li>tenkasi-627751, tamil nadu,india</li>
               <li>📞 <a href={`tel:${phoneNumber}`} className="text-light text-decoration-none">+91-7338994779</a></li>
               <li>📧 <a href="mailto:medqlaboratory@gmail.com" className="text-light text-decoration-none">medqlaboratory@gmail.com</a></li>
-              <li>🕒 Open Daily: 9AM-10PM</li>
+              
             </ul>
           </div>
         </div>

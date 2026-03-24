@@ -263,7 +263,7 @@ Thank you for contacting MedQ Diagnostics!`;
                       176/1,NH44,kollam to<br />
                       Thirumangalam road,
                       Opposite union office,<br />
-                      kadaiyanallur,Tenkasi-627751
+                      kadayanallur,Tenkasi-627751
                     </p>
                   </div>
                 </div>
@@ -296,9 +296,9 @@ Thank you for contacting MedQ Diagnostics!`;
                   <div>
                     <h6 className="mb-1">Working Hours</h6>
                     <p className="text-muted mb-0">
-                      Mon-Fri: 8:00 AM - 8:00 PM<br />
-                      Sat: 9:00 AM - 6:00 PM<br />
-                      Sun: 10:00 AM - 4:00 PM
+                      Mon-Fri: 9:00 AM - 9:00 PM<br />
+                      Sat: 9:00 AM - 9:00 PM<br />
+                      Sun: 9:00 AM - 9:00 PM
                     </p>
                   </div>
                 </div>

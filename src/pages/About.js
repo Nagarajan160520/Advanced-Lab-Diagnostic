@@ -267,89 +267,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section with Owl Carousel - 3 Cards */}
-      <section className="py-5 bg-light">
-        <div className="container">
-          <h2 className="text-center fw-bold mb-5">Our Medical Experts</h2>
-          <div className="owl-carousel owl-theme">
-            {[
-              {
-                name: 'Dr. Rajesh Kumar',
-                qualification: 'MD, DNB Pathology',
-                experience: '15+ years',
-                specialization: 'Chief Pathologist',
-                //image: 'https://i.pinimg.com/736x/dc/29/6d/dc296de22eba90f8a94e037d92d2c76e.jpg'
-              },
-              {
-                name: 'Dr. Priya Sharma',
-                qualification: 'MD Microbiology',
-                experience: '12+ years',
-                specialization: 'Microbiology Head',
-                //image: 'https://i.pinimg.com/736x/50/89/73/508973ffe734c67376691718e39e33a5.jpg'
-              },
-              {
-                name: 'Dr. Prakash Reddy',
-                qualification: 'MD Biochemistry',
-                experience: '10+ years',
-                specialization: 'Biochemistry Head',
-                //image: 'https://i.pinimg.com/736x/dc/29/6d/dc296de22eba90f8a94e037d92d2c76e.jpg'
-              },
-              {
-                name: 'Dr. Sam Verma',
-                qualification: 'MD Hematology',
-                experience: '8+ years',
-                specialization: 'Hematology Specialist',
-                //image: 'https://i.pinimg.com/736x/dc/29/6d/dc296de22eba90f8a94e037d92d2c76e.jpg'
-              },
-              {
-                name: 'Dr. Anjali Mehta',
-                qualification: 'MD Radiology',
-                experience: '14+ years',
-                specialization: 'Radiology Head',
-                //image: 'https://i.pinimg.com/736x/50/89/73/508973ffe734c67376691718e39e33a5.jpg'
-              },
-              {
-                name: 'Dr. Vikram Singh',
-                qualification: 'MD Immunology',
-                experience: '9+ years',
-                specialization: 'Immunology Specialist',
-                //image: 'https://i.pinimg.com/736x/dc/29/6d/dc296de22eba90f8a94e037d92d2c76e.jpg'
-              }
-            ].map((doctor, index) => (
-              <div key={index} className="item">
-                <div className="card lab-team-card border-0 shadow-sm h-100 mx-2" style={{
-                  borderRadius: '15px',
-                  overflow: 'hidden',
-                  transition: 'all 0.3s ease'
-                }}>
-                 {/* <img 
-                    src={doctor.image} 
-                    className="card-img-top" 
-                    alt={doctor.name}
-                    style={{
-                      height: '280px',
-                      objectFit: 'cover',
-                      width: '100%'
-                    }}
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/300x280/007bff/ffffff?text=Doctor+Image';
-                    }}
-                  /> */}
-                  <div className="card-body text-center p-4">
-                    <h5 className="fw-bold mb-2 text-primary">{doctor.name}</h5>
-                    <h6 className="text-dark mb-2" style={{ fontSize: '0.9rem' }}>{doctor.qualification}</h6>
-                    <p className="text-muted mb-2 small">{doctor.specialization}</p>
-                    <p className="text-danger mb-0 small fw-bold">
-                      <i className="fas fa-briefcase me-1"></i>
-                      Experience: {doctor.experience}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Location & Contact Section */}
       <section className="py-5">
@@ -406,25 +323,6 @@ const About = () => {
                         </p>
                       </div>
                       
-                      <div className="col-md-6 mb-2">
-                        <p className="mb-1">
-                          <i className="fas fa-clock me-2 text-warning"></i>
-                          Mon-Sat: 6:00 AM - 10:00 PM
-                        </p>
-                      </div>
-                      <div className="col-md-6 mb-2">
-                        <p className="mb-1">
-                          <i className="fas fa-clock me-2 text-warning"></i>
-                          Sunday: 7:00 AM - 2:00 PM
-                        </p>
-                      </div>
-
-                      <div className="col-12 mt-3">
-                        <div className="alert alert-info mb-0">
-                          <i className="fas fa-info-circle me-2"></i>
-                          <strong>Emergency Services:</strong> Available 24/7 for critical tests
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -474,16 +372,7 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="mt-3 p-3 bg-success text-white rounded">
-                    <h6 className="mb-2">
-                      <i className="fas fa-home me-2"></i>
-                      Home Collection Service
-                    </h6>
-                    <p className="mb-0 small">
-                      Free home sample collection available within Kadayanallur and surrounding areas. 
-                      Call to schedule a pickup.
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
             </div>
