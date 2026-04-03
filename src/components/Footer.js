@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => { 
   // Your phone number (without any special characters for the tel link)
-  const phoneNumber = '+91 6381095854'; // Format: +91 followed by number without spaces
+  const phoneNumber = '+91 7338994779'; // Format: +91 followed by number without spaces
   
   return (
     <footer className="footer" style={{backgroundColor: '#1e293b', color: 'white', padding: '40px 0'}}>
@@ -60,26 +60,14 @@ const Footer = () => {
             <p className="mb-0">&copy; 2025 Advanced Lab & Diagnostic Centre.</p>
             <p>
               Developed by{' '}
-              <a 
-                href={`tel:${phoneNumber}`}
+              <span
                 style={{
                   color: '#c5ec18ff',
-                  textDecoration: 'none', // This removes default underline
-                  fontWeight: 'bold',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.color = '#741f1fff';
-                  e.target.style.textDecoration = 'none'; // No underline on hover
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.color = '#10d0f1ff';
-                  e.target.style.textDecoration = 'none'; // No underline when mouse leaves
+                  fontWeight: 'bold'
                 }}
               >
-                Snowking.pvt
-              </a>
+                MedQ Labs Team
+              </span>
               {' '}
             </p>
           </div>
